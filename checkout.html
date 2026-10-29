@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pago · First Class Pilot</title>
+  <link rel="icon" type="image/webp" href="assets/img/logo-emblem.webp">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="checkout">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="container">
+    <div class="page-head"><h1>Finalizar compra</h1></div>
+    <div id="checkout">
+      <div class="cart-layout">
+        <form id="checkout-form" novalidate>
+          <fieldset class="form-section">
+            <legend>Contacto</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                <p class="field-error" id="email-error"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Dirección de envío</legend>
+            <div class="fields fields--2">
+              <div class="field span-2">
+                <label for="country">País <span class="req" aria-hidden="true">*</span></label>
+                <select id="country" name="country" autocomplete="country" required aria-describedby="country-help"></select>
+                <p class="muted field-help" id="country-help">Define moneda, envío y formato de dirección.</p>
+              </div>
+              <div class="field span-2">
+                <label for="name">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                <p class="field-error" id="name-error"></p>
+              </div>
+              <div class="field span-2">
+                <label for="address">Dirección <span class="req" aria-hidden="true">*</span></label>
+                <input id="address" name="address" autocomplete="street-address" required aria-describedby="address-error">
+                <p class="field-error" id="address-error"></p>
+              </div>
+              <div class="field">
+                <label for="city">Ciudad <span class="req" aria-hidden="true">*</span></label>
+                <input id="city" name="city" autocomplete="address-level2" required aria-describedby="city-error">
+                <p class="field-error" id="city-error"></p>
+              </div>
+              <div class="field">
+                <label for="zip">Código postal <span class="req" aria-hidden="true">*</span></label>
+                <input id="zip" name="zip" autocomplete="postal-code" required aria-describedby="zip-help zip-error">
+                <p class="muted field-help" id="zip-help"></p>
+                <p class="field-error" id="zip-error"></p>
+              </div>
+              <div class="field">
+                <label for="region"><span id="region-label">Estado</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="region" name="region" autocomplete="address-level1" required aria-describedby="region-error">
+                <p class="field-error" id="region-error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Teléfono</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Método de entrega</legend>
+            <label class="radio-card"><input type="radio" name="delivery" value="standard" checked>
+              <span class="grow"><strong>Estándar</strong><br><span class="muted">5–7 días hábiles · <span data-ship="standard"></span>, gratis desde <span data-free-ship></span></span></span></label>
+            <label class="radio-card"><input type="radio" name="delivery" value="express">
+              <span class="grow"><strong>Express</strong><br><span class="muted">1–2 días hábiles · <span data-ship="express"></span></span></span></label>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Pago</legend>
+            <label class="radio-card"><input type="radio" name="payment" value="card" checked>
+              <span class="grow"><strong>Tarjeta de crédito o débito</strong></span></label>
+            <label class="radio-card"><input type="radio" name="payment" value="paypal">
+              <span class="grow"><strong>PayPal</strong></span></label>
+            <p class="notice">Prototipo: el pago es simulado y no se cobra nada.</p>
+          </fieldset>
+        </form>
+
+        <aside class="summary" id="checkout-summary" aria-label="Resumen del pedido"></aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/products.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "first-class-pilot-prototype",
+  "private": true,
+  "scripts": {
+    "serve": "python3 serve.py 8000",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}

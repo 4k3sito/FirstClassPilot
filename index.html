@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Class Pilot · Ropa de aviador premium</title>
+  <meta name="description" content="Camisas de piloto premium hechas en México. Manga larga y manga corta.">
+  <link rel="preload" as="image" href="assets/img/hero-ala.webp" fetchpriority="high">
+  <link rel="icon" type="image/webp" href="assets/img/logo-emblem.webp">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Stock photos (Unsplash license): hero https://unsplash.com/photos/Hp9cM6dGFO0, band https://unsplash.com/photos/ERUiIwjIf3Q -->
+    <section class="hero hero--photo">
+      <img class="hero-bg" src="assets/img/hero-ala.webp" width="2000" height="1100" alt="" fetchpriority="high">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">P I L O T · Premium</p>
+          <h1>Hecho para la cabina.</h1>
+          <p class="lead">Camisas de piloto con charreteras, botones metálicos y un corte que aguanta la ruta completa. Diseñadas y confeccionadas en México.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#coleccion">Ver colección</a>
+          </div>
+          <ul class="seals">
+            <li>Hecho en México</li>
+            <li>Envío a MX, US y CA · gratis desde <span data-free-ship></span></li>
+            <li>Devoluciones 30 días</li>
+          </ul>
+        </div>
+        <!-- Featured-product chip (Mobbin ref: Zellerfeld hero) — filled by app.js -->
+        <a class="hero-feature" id="hero-feature" hidden></a>
+      </div>
+    </section>
+
+    <section class="section" id="coleccion" aria-labelledby="coleccion-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Colección insignia</p>
+          <h2 id="coleccion-title">Dos camisas. Cero concesiones.</h2>
+        </div>
+        <div class="grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="band-title">
+      <img class="band-bg" src="assets/img/banda-cabina.webp" width="2000" height="900" alt="" loading="lazy">
+      <div class="container">
+        <p class="eyebrow">De la cabina a la escala</p>
+        <h2 id="band-title">Uniforme que se gana cada milla.</h2>
+        <a class="btn" href="#coleccion">Comprar ahora</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="patch-title">
+      <div class="container story">
+        <img class="patch" src="assets/img/logo-patch.webp" width="739" height="400" loading="lazy"
+             alt="Parche bordado en cobre de First Class Pilot: alas de piloto, escudo y la leyenda Premium, Made in Mexico">
+        <div>
+          <p class="eyebrow">El parche</p>
+          <h2 id="patch-title">Bordado con detalle. Hecho en México.</h2>
+          <p class="muted">Cada camisa lleva nuestro parche en hilo cobre: alas, escudo y estrellas. Es la firma de un taller mexicano que revisa cada costura como si fuera la lista de chequeo antes del despegue.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="rule"><span data-icon="star"></span></div>
+        <div class="features">
+          <div><span data-icon="wings"></span><h3>Estándar de aerolínea</h3><p class="muted">Charreteras desmontables y cuello estructurado, listo para uniforme.</p></div>
+          <div><span data-icon="thread"></span><h3>Tela que no se arruga</h3><p class="muted">Mezcla de algodón que llega a destino igual que salió.</p></div>
+          <div><span data-icon="flag"></span><h3>Hecho en México</h3><p class="muted">Confección local, controlada pieza por pieza.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/products.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

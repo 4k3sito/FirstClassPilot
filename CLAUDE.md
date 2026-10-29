@@ -30,10 +30,9 @@ HTML + CSS + JS vanilla, sin framework ni build. Pruebas E2E con Playwright (Typ
 - El deploy lo dispara `.github/workflows/deploy.yml` al llegar a `main` y requiere aprobación del environment `production`.
 - Antes de activarlo: separar lo público (`*.html` + `assets/`) en una carpeta (p. ej. `public/`) y usar `BUILD_DIR=public`, para no publicar `tests/`, `docs/`, `design-system/` ni `serve.py`.
 
-## Git (excepción a las reglas globales)
-- **Sin pull requests**: los commits van directo a `main` y se hace push a `origin/main` (`git@github.com:4k3sito/FirstClassPilot.git`).
-- Se mantienen: Conventional Commits pequeños, checkpoint antes de cada commit/push y revisión con el subagente `reviewer` antes del push.
-- `/ship` en este repo = commit + push a `main` (sin abrir PR). CI corre en cada push a `main`.
+## Git
+- Flujo global (sin pull requests, directo a `main`). Remoto: `git@github.com:4k3sito/FirstClassPilot.git`.
+- CI corre en cada push a `main`.
 
 ## Notion
 - **Base de tareas**: https://app.notion.com/p/6958461f59704d9c82f97ac5ea4d18d4
